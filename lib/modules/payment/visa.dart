@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:payment/modules/register/register.dart';
 import 'package:payment/shared/components/components.dart';
@@ -13,14 +15,15 @@ class VisaCardScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: payColor,
         elevation: 0,
-        actions: [
-          IconButton(
-            onPressed: () {
-              exit(context);
-            },
-            icon: const Icon(Icons.exit_to_app),
+        leading: IconButton(
+          onPressed: () {
+            exit(context);
+          },
+          icon: Transform.rotate(
+            angle: 180 * math.pi / 180,
+            child: const Icon(Icons.exit_to_app),
           ),
-        ],
+        ),
       ),
       body: WebView(
         // 441110

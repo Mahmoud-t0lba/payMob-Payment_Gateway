@@ -9,6 +9,7 @@ class RefCodeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: payColor,
       ),
       body: Center(
         child: Column(
